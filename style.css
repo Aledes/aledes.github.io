@@ -12,14 +12,18 @@
 }
 .nav {
     text-decoration: none;
-    color:black;
-}
-.nav-pill:active, nav:visited, nav:default{
-    color:black;
+    color:white;
 }
 
-h1, h2{
+b {
+    color:lightgoldenrodyellow;
+    text-shadow: 1px 1px 3px grey;
+}
+
+h1, h2, h3{
+    color: white;
     margin-left: 45px;
+    text-shadow: 2px 2px 5px grey;
 }
 ul {
     display: flex;
@@ -28,7 +32,16 @@ ul {
     padding: 20px;
 }
 
-li a:active, li a:hover, li a:visited{
+li a{
+    font-size:1.5em;
+}
+
+li a:active, li a:visited{
+    text-decoration:none;
+    color: white;
+}
+li a:hover{
+    color: lightgrey;
     text-decoration:none;
 }
 
@@ -41,6 +54,9 @@ li a:active, li a:hover, li a:visited{
 
 body {
     font-family: sans-serif;
+    background-image:url(circuit.jpeg);
+    background-attachment:fixed;
+    
 }
 
 a{
