@@ -6,10 +6,15 @@
     background-image: image(circuit.jpeg);
     background-position:center;
 }
-}
+
 .clear-bg {
     background-color: null;
 }
+
+.grey{
+    color: lightgrey;
+}
+
 .nav {
     text-decoration: none;
     color:white;
@@ -20,10 +25,13 @@ b {
     text-shadow: 1px 1px 3px grey;
 }
 
-h1, h2, h3{
+h1, h2{
     color: white;
     margin-left: 45px;
     text-shadow: 2px 2px 5px grey;
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-iteration-count: 1;
 }
 ul {
     display: flex;
@@ -34,6 +42,9 @@ ul {
 
 li a{
     font-size:1.5em;
+    animation-duration: .5s;
+    animation-name: slideinnav;
+    animation-iteration-count: 1;
 }
 
 li a:active, li a:visited{
@@ -56,7 +67,6 @@ body {
     font-family: sans-serif;
     background-image:url(circuit.jpeg);
     background-attachment:fixed;
-    
 }
 
 a{
@@ -72,4 +82,29 @@ a{
     width: 100%;
     background-color:lightgrey;
     color: black;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 6%;
+    width: 100%;
+  }
+}
+
+
+@keyframes slideinnav {
+  from {
+    margin-left: 300%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 6%;
+    width: 100%;
+  }
 }
