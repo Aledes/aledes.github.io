@@ -122,7 +122,8 @@ body {
     background-color: #999999;
     color: #111111;
     text-align: center;
-    min-height: 640px;
+    height: 650px;
+    max-width: 425px;
 }
 
 .about-box {
