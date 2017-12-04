@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Weather Report</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="weatherstyle.css">
+</head>
+
+<body>
+    <div class="nav navbar">
+        <h1 class="display-4" id="cityState">Weather For: </h1>
+        <form class="container">
+            <div class="form-row">
+                <div class="col-7">
+                    <input type="text" class="form-control" placeholder="City" name="city" id="cityName">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="State (ex: IL)" name="state" id="stateName">
+                </div>
+                <button type="submit" class="btn btn-primary weatherGet" onclick="return getLocation();">Submit</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="container weathertable">
+        <table class="table table-bordered table-hover table-responsive">
+            <caption>Brought to you by Yahoo!</caption>
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col" id="date1">7 Day Forecast!</th>
+                    <th scope="col" id="date2"></th>
+                    <th scope="col" id="date3"></th>
+                    <th scope="col" id="date4"></th>
+                    <th scope="col" id="date5"></th>
+                    <th scope="col" id="date6"></th>
+                    <th scope="col" id="date7"></th>
+                </tr>
+            </thead>
+            <tr>
+                <!-- Temperature High/Low-->
+                <td id="temp1">Temperature</td>
+                <td id="temp2"></td>
+                <td id="temp3"></td>
+                <td id="temp4"></td>
+                <td id="temp5"></td>
+                <td id="temp6"></td>
+                <td id="temp7"></td>
+            </tr>
+            <tr>
+                <!--Weather conditions -->
+                <td id="cond1">Conditions</td>
+                <td id="cond2"></td>
+                <td id="cond3"></td>
+                <td id="cond4"></td>
+                <td id="cond5"></td>
+                <td id="cond6"></td>
+                <td id="cond7"></td>
+            </tr>
+        </table>
+    </div>
+    <script src="presentationscript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+</body>
+
+</html>

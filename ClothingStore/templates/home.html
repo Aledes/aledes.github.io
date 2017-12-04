@@ -1,0 +1,42 @@
+<div class="row" ng-controller="myController" ng-init="Initialized()">
+    <div class="col-xs-10 col-sm-6 col-md-3" ng-repeat="model in models">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                {{mc.model.name}} {{model.name}}
+                <!-- using $scope-->
+            </div>
+            <div class="panel-body">
+                <p class="pull-right price">
+                    {{mc.model.price | currency}}
+                    <!-- with scope-->
+                    {{model.price | currency}}
+                </p>
+                <p>
+                    <img class="img-responsive" ng-src="{{model.image}}">
+                </p>
+                <!--Element-baseed directive
+                        <storePanels></storePanels> -->
+                <!-- Attribute Based Directive:-->
+                <div store-panels></div>
+
+                <!--Original Way:
+                        <div ng-controller="panelController" ng-include="'/Templates/storepanels.html'">
+                        </div>
+                        -->
+
+                <button ng-show="model.canPurchase" ng-disabled="model.outOfStock" class="btn btn-default">Add to Cart</button>
+                <div ng-show="model.outOfStock">
+                    <button class="btn btn-danger disabled">Out of Stock!</button>
+                </div>
+            </div>
+        </div>
+        <!-- Expression practice
+                {{4+2}} {{"string" + " concat"}} {{mc.somethingelse}}
+                <p>
+                    Today's date is
+                    <span ng-init='date = Date.now()'>                {{mc.date | date: 'MM/dd/yyyy @ h:mma'}}</span>
+                 MMM = 'Oct' yy = '17'
+                    MMMM dd = 'October 24'
+                </p>-->
+    </div>
+</div>
