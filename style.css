@@ -29,8 +29,10 @@ body {
 .window {
     margin-top: 25vh;
     text-align: center;
-    color: white;
-    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+    color: whitesmoke;
+    text-shadow: 5px 5px 10px black;
+    background-color: rgba(0, 0, 0, .5);
+    border-radius: 5px;
 }
 
 .huge {
@@ -116,7 +118,7 @@ body {
     padding-top: 1em;
     padding-bottom: 1em;
     border-radius: 5px;
-    background-color: #323232;
+    background-color: darkslategrey;
     margin-bottom: 1em;
     color: #aaaaaa;
 }
@@ -139,5 +141,10 @@ body {
 }
 
 a {
-    color: royalblue;
+    color: yellowgreen;
+}
+
+a:hover {
+    color: white;
+    text-decoration: none;
 }
